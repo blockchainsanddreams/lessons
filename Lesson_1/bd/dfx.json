@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "bd_backend": {
+      "candid": "src/bd_backend/bd_backend.did",
+      "package": "bd_backend",
+      "type": "rust"
+    },
+    "bd_frontend": {
+      "dependencies": [
+        "bd_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/bd_frontend/src/index.html"
+      },
+      "source": [
+        "src/bd_frontend/assets",
+        "dist/bd_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
